@@ -1,0 +1,202 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#main {
+    height: 800px;
+    width: 600px;
+    /*background: aquamarine;*/
+    margin: 100px auto;
+    border: 1px solid black;
+}
+
+#left {
+    height: 600px;
+    width: 100px;
+    /*background: green;*/
+    float: left;
+    margin-left: 50px;
+
+}
+
+#l_name {
+    /*border: 1px solid black;*/
+    height: 45px;
+    margin: 10px;
+    padding-top: 10px;
+    color: #555555;
+    font-family: PingFangSC-Regular;
+}
+
+#l_link {
+    /*border: 1px solid black;*/
+    height: 45px;
+    margin: 10px;
+    color: #555555;
+    font-family: PingFangSC-Regular;
+}
+
+#l_lift_time {
+    /*border: 1px solid black;*/
+    height: 45px;
+    margin: 10px;
+    color: #555555;
+    font-family: PingFangSC-Regular;
+    size: 14px;
+}
+
+#l_desc {
+    /*border: 1px solid black;*/
+    height: 200px;
+    margin: 10px;
+    color: #555555;
+    font-family: PingFangSC-Regular;
+    size: 14px;
+}
+
+#l_achievement {
+    /*border: 1px solid black;*/
+    height: 200px;
+    margin: 18px;
+    color: #555555;
+    font-family: PingFangSC-Regular;
+    size: 14px;
+}
+
+
+#right {
+    height: 600px;
+    width: 400px;
+    /*background: orange;*/
+    float: right;
+    margin-right: 50px;
+
+}
+
+#experience {
+    padding: 30px;
+    margin-left: 30px;
+    color: #555555;
+    font-size: 18px;
+    font-family: PingFangSC-Regular;
+
+}
+
+#r_name {
+    border: 1px solid #BBBBBB;
+    height: 45px;
+    margin: 10px;
+
+}
+
+#r_link {
+    border: 1px solid #BBBBBB;
+    height: 45px;
+    margin: 10px;
+}
+
+#r_lift_time {
+    /*border: 1px solid darkgray;*/
+    height: 45px;
+    margin: 10px;
+}
+
+#r_desc {
+    border: 1px solid #BBBBBB;
+    height: 200px;
+    margin: 10px;
+}
+
+#r_achievement {
+    border: 1px solid #BBBBBB;
+    height: 200px;
+    margin: 10px;
+}
+
+#submit {
+    height: 45px;
+    width: 90px;
+    background-color: #00B38A;
+    margin-left: 10px;
+    margin-top: 30px;
+    color: #FFFFFF;
+}
+
+/*细节*/
+#r_item_name {
+    height: 44px;
+    width: 377px;
+    border: 0px white;
+}
+
+#r_link_name {
+    height: 44px;
+    width: 377px;
+    border: 0px white;
+}
+
+#r_date_begin {
+    height: 44px;
+    width: 185px;
+    border: darkgray solid 1px;
+}
+
+#r_date_end {
+    height: 44px;
+    width: 185.7px;
+    border: darkgray solid 1px;
+}
+
+/*textarea{*/
+/*    height: 100%;*/
+/*    width: 100%;*/
+/*    resize: none;*/
+/*}*/
+textarea {
+    width: 380px;
+    height: 200px;
+    resize: none;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#count {
+    float: right;
+    height: 20px;
+}
+
+#count1 {
+    float: right;
+}
+
+
+/*设置placeholder字体*/
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #BBBBBB;
+    font-family: PingFangSC-Regular;
+    size: 14px;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #BBBBBB;
+    font-family: PingFangSC-Regular;
+    size: 14px;
+    opacity: 1;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #BBBBBB;
+    font-family: PingFangSC-Regular;
+    size: 14px;
+    opacity: 1;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #BBBBBB;
+    size: 14px;
+    font-family: PingFangSC-Regular;
+}
+
+
+

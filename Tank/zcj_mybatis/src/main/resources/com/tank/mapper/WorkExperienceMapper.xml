@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--mapper接口的位置-->
+<mapper namespace="com.tank.mapper.WorkExperienceMapper">
+    <!--   结果集封装-->
+    <resultMap id="workExperienceMap" type="WorkExperience">
+        <!--       主键字段的对应-->
+        <id property="id" column="id"></id>
+        <!--       非主键字段的对应-->
+        <result property="gmtCreate" column="gmt_create"></result>
+        <result property="gmtModifeid" column="gmt_modified"></result>
+        <result property="company" column="company"></result>
+        <result property="isVisible" column="is_visible"></result>
+        <result property="department" column="department"></result>
+        <result property="position" column="position"></result>
+        <result property="hireDate" column="hire_time"></result>
+        <result property="leaveDate" column="leave_time"></result>
+        <result property="workContent" column="work_content"></result>
+        <result property="userId" column="user_id"></result>
+        <result property="deleteStatus" column="delete_status"></result>
+    </resultMap>
+    <!--    配置查询所有-->
+    <select id="findAll" resultMap="workExperienceMap">
+select * from work_experience
+</select>
+    <!--    保存-->
+    <insert id="saveWorkExperience" parameterType="WorkExperience">
+        insert into work_experience(company,is_visible,department,position,hire_time,leave_time,work_content,user_id)values(#{company},#{isVisible},#{department},#{position},#{hireDate},#{leaveDate},#{workContent},#{userId});
+    </insert>
+</mapper>

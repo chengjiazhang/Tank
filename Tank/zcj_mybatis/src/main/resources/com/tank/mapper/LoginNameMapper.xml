@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--mapper接口的位置-->
+<mapper namespace="com.tank.mapper.LoginNameMapper">
+    <!--   结果集封装-->
+    <resultMap id="loginMapper" type="LoginUser">
+        <!--       主键字段的对应-->
+        <id property="id" column="id"></id>
+        <!--       非主键字段的对应-->
+        <result property="gmtCreate" column="gmt_create"></result>
+        <result property="gmtModified" column="gmt_modified"></result>
+        <result property="loginName" column="login_name"></result>
+        <result property="password" column="password"></result>
+    </resultMap>
+
+    <!--    配置查询所有-->
+    <select id="findAllByName" resultMap="loginMapper" parameterType="String">
+        select login_name,password,id from login_user where login_name = #{name}
+    </select>
+
+    <insert id="registerUser" parameterType="LoginUser">
+        insert into login_user(login_name,password)values(#{loginName},#{password});
+    </insert>
+
+</mapper>

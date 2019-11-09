@@ -1,0 +1,59 @@
+.main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.main img{
+    width: 100%;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+}
+.main .basic{
+    width: 260px;
+    height: 54px;
+    position: absolute;
+    margin-left: 936px;
+    margin-top: 444px;
+    z-index: 1;
+}
+.main .introduce{
+    width: 260px;
+    height: 48px;
+    position: absolute;
+    margin-left: 936px;
+    margin-top: 492px;
+    z-index: 1;
+}
+.main .work{
+    width: 260px;
+    height: 48px;
+    position: absolute;
+    margin-left: 936px;
+    margin-top: 540px;
+
+    z-index: 1;
+}
+.main .project{
+    width: 260px;
+    height: 48px;
+    position: absolute;
+    margin-left: 936px;
+    margin-top: 588px;
+
+    z-index: 1;
+}
+.main .education{
+    width: 260px;
+    height: 48px;
+    position: absolute;
+    margin-left: 936px;
+    margin-top: 636px;
+
+    z-index: 1;
+}
+.main a{
+    width: 260px;
+    height: 54px;
+    display: inline-block;
+}

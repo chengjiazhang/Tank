@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <welcome-file-list>
+        <welcome-file>/jsp/user/login.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>educationController</servlet-name>
+        <servlet-class>com.tank.controller.EducationController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>educationController</servlet-name>
+        <url-pattern>/jsp/education</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>experience</servlet-name>
+        <servlet-class>com.tank.controller.ExperienceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>experience</servlet-name>
+        <url-pattern>/Experience</url-pattern>
+    </servlet-mapping>
+    <!--    <servlet>-->
+<!--        <servlet-name>WorkExperience</servlet-name>-->
+<!--        <servlet-class>com.tank.controller.WorkExperienceServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>WorkExperience</servlet-name>-->
+<!--        <url-pattern>/work</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+</web-app>
