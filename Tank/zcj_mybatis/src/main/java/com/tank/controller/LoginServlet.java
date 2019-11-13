@@ -6,12 +6,10 @@ import com.tank.util.Conn.ConnData;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author edz
@@ -37,8 +35,29 @@ private Integer id;
             userDTO.setPassword(userPassword);
             userDTO.setAge(20);
             session.setAttribute("userDTO",userDTO);
-            res.sendRedirect("jsp/work/test.jsp");
-           // req.getRequestDispatcher("/jsp/work/test.jsp").forward(req, res);
+            System.out.println("*******************");
+           // String str=java.net.URLDecoder(req.getParameter("userName"),"UTF-8");
+            Cookie cUserName=new Cookie("userName",java.net.URLDecoder.decode(req.getParameter("userName"),"UTF-8"));
+            Cookie cPassword=new Cookie("userPassword",java.net.URLDecoder.decode(req.getParameter("userPassword"),"UTF-8"));
+            cUserName.setMaxAge(50);
+            cPassword.setMaxAge(50);
+            res.addCookie(cUserName);
+            res.addCookie(cPassword);
+            Cookie cookie=null;
+            Cookie cookies[]=null;
+            cookies=req.getCookies();
+            if(Objects.nonNull(cookies)){
+                for(int i=0;i<cookies.length;i++){
+                    cookie=cookies[i];
+                    System.out.println("cookies.getNmae=="+cookie.getName());
+                    System.out.println("cookie.getValue=="+cookie.getValue());
+                    System.out.println("cookie.getmaxage=="+cookie.getMaxAge());
+                }
+            }
+
+
+//            res.sendRedirect("jsp/work/test.jsp");
+            req.getRequestDispatcher("/jsp/work/simple.jsp").forward(req, res);
             System.out.println("你好");
         } else {
             String message = "Sorry," + "请重新输入！" + "用户名：" + userName + "或密码：*****" + "输入错误！";

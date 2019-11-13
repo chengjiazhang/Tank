@@ -2,7 +2,6 @@ package com.tank.controller;
 
 import com.tank.util.Conn.ConnData;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
