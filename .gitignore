@@ -1,2 +1,4 @@
 /Tank/zcj_mybatis/lib/
 /Tank/zcj_mybatis/target/
+*.class
+*.jar
