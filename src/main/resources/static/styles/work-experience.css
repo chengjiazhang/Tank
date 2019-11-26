@@ -1,0 +1,70 @@
+div#container {
+    width: 739px;
+    background-color: aquamarine;
+    margin: 0 auto;
+}
+
+div#main {
+    width: 560px;
+    padding-top: 66px;
+    padding-left: 79px;
+    background-color: blue;
+}
+
+div span {
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #555555;
+}
+
+.box {
+    display: flex;
+    flex-direction: column
+}
+
+.box-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clearfix:after {
+    content: "\20";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.box-between input {
+    display: block;
+    width: 487px;
+}
+
+.box-top {
+    margin-top: 23px;
+}
+
+.box-head {
+    margin-top: 63px;
+}
+
+.box-between span {
+    display: block;
+    padding-top: 5px;
+}
+
+.date-width {
+    width: 100px;
+    margin-left: 10px;
+}
+#date{
+    width:117px;
+}
+.save {
+    background: #00B38A;
+    border-radius: 2px;
+    border-radius: 2px;
+    margin-top: 24px;
+    width: 102px;
+    text-align: center;
+    margin-left: 67px;
+}

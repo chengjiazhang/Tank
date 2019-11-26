@@ -1,4 +1,5 @@
-/Tank/zcj_mybatis/lib/
-/Tank/zcj_mybatis/target/
+target/
 *.class
 *.jar
+*.war
+.DS_Store

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="/styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/styles/work-experience.css">
+    <script type="text/javascript" src="/libs/work-experience.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+<div id="container">
+    <div id="main" class="clearfix box">
+        <h1>工作经历</h1>
+        <form>
+            <div class="box-between">
+                <span>公司名称</span><input value="" placeholder="公司名称" id="company" name="company">
+            </div>
+            <div class="box-between box-head">
+                <span>部门</span><input value="你好" placeholder="部门" id="department" name="department">
+            </div>
+            <div class="box-between box-top">
+                <span>职位名称</span><input value="nihao" placeholder="职位名称" id="position" name="position">
+            </div>
+            <div class="box-between box-top">
+                <span id="date">在值时间</span>
+                <input value="" class="date-width" placeholder="开始时间" id="hireTime" name="hireTime"><input value=""
+                                                                                                           class="date-width"
+                                                                                                           placeholder="离开时间"
+                                                                                                           id="leaveTime"
+                                                                                                           name="leaveTime">
+            </div>
+            <div class="box-between box-top">
+                <span>工作内容</span><input value="" placeholder="工作内容" id="workContent" name="workContent">
+            </div>
+            <div class="save">
+                <button type="button" onclick="submit()">提交</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="libs/jquery.js"></script>
+<script>
+    function submit() {
+        var company = document.getElementById("company").value;
+        var department = document.getElementById("department").value;
+        var position = document.getElementById("position").value;
+        var hireTime = document.getElementById("hireTime").value;
+        var leaveTime = document.getElementById("leaveTime").value;
+        var workContent = document.getElementById("workContent").value;
+        $.ajax({
+            type: "post",
+            url: "/ajax",
+            data: {
+                company: company,
+                department: department,
+                position: position,
+                hireTime: hireTime,
+                leaveTime: leaveTime,
+                workContent: workContent
+            },
+            dataType: "json",
+            success: function (data) {
+                console.log(data);
+                var msg = data.msg;
+                alert(msg);
+            }
+        })
+    }
+
+</script>
+
+</body>
+
+</html>
