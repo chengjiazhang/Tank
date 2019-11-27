@@ -34,11 +34,14 @@ public class WorkExperienceController {
         return "experience";
     }
 
-    @RequestMapping(value = "/ajax", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String, Object> login(HttpServletRequest request, HttpServletResponse response) {
-        Map<String, Object> map = new HashMap<String, Object>();
+    @RequestMapping(value = "/ajax", method = RequestMethod.POST)
+    public String login(HttpServletRequest request, HttpServletResponse response) {
+//        Map<String, Object> map = new HashMap<String, Object>();
         System.out.println("ajax进来");
+        workExperienceDO.setIsVisible("1");
+        workExperienceDO.setUserId(6);
+        workExperienceDO.setDeleteStatus(3);
         workExperienceDO.setCompany(request.getParameter("company"));
         workExperienceDO.setDepartment(request.getParameter("department"));
         workExperienceDO.setPosition(request.getParameter("position"));
@@ -47,7 +50,7 @@ public class WorkExperienceController {
         workExperienceDO.setWorkContent(request.getParameter("workContent"));
         System.out.println(workExperienceDO);
         workExperienceService.save(workExperienceDO);
-        return map;
+        return "success";
     }
     @RequestMapping("/success")
     public String success() {

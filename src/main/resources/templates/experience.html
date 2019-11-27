@@ -36,14 +36,14 @@
                 <span>工作内容</span><input value="" placeholder="工作内容" id="workContent" name="workContent">
             </div>
             <div class="save">
-                <button type="button" onclick="submit()">提交</button>
+                <button type="button" onclick="f1()">提交</button>
             </div>
         </form>
     </div>
 </div>
 <script src="libs/jquery.js"></script>
 <script>
-    function submit() {
+    function f1() {
         var company = document.getElementById("company").value;
         var department = document.getElementById("department").value;
         var position = document.getElementById("position").value;
@@ -63,9 +63,7 @@
             },
             dataType: "json",
             success: function (data) {
-                console.log(data);
-                var msg = data.msg;
-                alert(msg);
+                alert("success");
             }
         })
     }

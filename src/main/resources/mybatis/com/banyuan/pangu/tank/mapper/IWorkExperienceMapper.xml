@@ -25,6 +25,6 @@
     </select>
     <!--    保存-->
     <insert id="saveWorkExperience" parameterType="com.banyuan.pangu.tank.domain.WorkExperienceDO">
-        insert into work_experience(company,is_visible,department,position,hire_time,leave_time,work_content,user_id)values(#{company},#{isVisible},#{department},#{position},#{hireDate},#{leaveDate},#{workContent},#{userId});
+        insert into work_experience(company,is_visible,department,position,hire_time,leave_time,work_content,user_id,delete_status)values(#{company},#{isVisible},#{department},#{position},#{hireTime},#{leaveTime},#{workContent},#{userId},#{deleteStatus});
     </insert>
 </mapper>
